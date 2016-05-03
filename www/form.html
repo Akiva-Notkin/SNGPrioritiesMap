@@ -1,0 +1,33 @@
+<!-- Include the validator script-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Plain Leaflet API</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.mapbox.com/mapbox.js/v2.2.4/mapbox.js'></script>
+<script src='common/jquery/jquery-1.12.0.min.js'></script>
+<script src='common/leafletini.js'></script>
+
+<link href='https://api.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet' />
+<link href='common/tempcss.css' rel='stylesheet' />
+</head>
+
+<script type="text/javascript">
+  console.log(leaflet);
+</script>
+
+<form name="myform">
+Search: <input type='text' name='query'>
+<a href="javascript: submitform()">Submit</a>
+</form>
+
+<script type="text/javascript">
+function submitform()
+{
+  if(document.myform.onsubmit())
+  {
+    document.myform.submit();
+  }
+}
+</script>

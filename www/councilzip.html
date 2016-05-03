@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Plain Leaflet API</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.mapbox.com/mapbox.js/v2.2.4/mapbox.js'></script>
+<script src='common/jquery/jquery-1.12.0.min.js'></script>
+<script src='common/leafletini.js'></script>
+
+<link href='https://api.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet' />
+<link href='common/tempcss.css' rel='stylesheet' />
+</head>
+<body>
+
+
+<div id='map'></div>
+
+<script>
+
+	var LearyBicycleSignal = {
+	    
+	};
+
+	var RainierAveSSafetyprojectsProtectedBikeLanes = {
+	"type": "FeatureCollection", 
+	"features": [
+		"type": "Feature",
+	    "properties": {
+	        "name": "Rainier Ave S Safety projects & Protected Bike Lanes",
+	        "facilitytype": "a greenway/PBL",
+	        "status": "in campaign",
+	        "yearcompleted": "",
+	        "sngpriority": "a prioritized project of",
+	        "neighborhood": "Rainier Valley",
+	        "councildistrict": "2",
+	        "cost": "",
+	        "extratext": "Make Rainier Ave S safe for people to walk and bike along and across. Expand the safety corridor project, create safe crossings and build protected bike lanes from Hillman City to Columbia City.",
+	        "sdotlink": "http://www.seattle.gov/transportation/rainieraves.htm",
+	        "sngbloglink": "http://seattlegreenways.org/blog/2015/03/05/rainier-ave-s-really-dangerous-yes/",
+	        "otherlink": "",
+	        "otherlinktext": "",
+	        "campaignpage": "http://seattlegreenways.org/2016-campaigns/district-2-rainier-ave/",
+	        "grouppagetogetinvolved": "http://seattlegreenways.org/neighborhoods/rainier-valley/",
+	        "sngpage": "http://seattlegreenways.org/get-involved/join-us/"
+	    },
+	    "geometry": {
+	        "type": "LineString",
+	        "coordinates": [[-122.296206, 47.575894], [-122.270311, 47.537044]]
+	    },
+	    "type": "Feature",
+	    "properties": {
+	        "name": "Leary Bicycle Signal",
+	        "facilitytype": "a signal",
+	        "status": "constructed",
+	        "yearcompleted": "2014",
+	        "sngpriority": "a prioritized project of",
+	        "neighborhood": "Fremont",
+	        "district": "6",
+	        "cost": "$40,000",
+	        "paragraph": "Seattle Department of Transportation (SDOT) just added a new, safer connection across Leary Way near the 6th Ave NW corridor. Connecting 6th Ave NW to the Burke Gilman Trail and to the existing Ballard Greenway is the top priority for Greenways groups in City Council District 6 that covers Fremont and Ballard. The push-button signal for people on bikes is placed near popular destinations including Hale’s Ales Brewery, Fred Meyer, and the Burke Gilman Trail. The new push button will help families going to the proposed 6th Ave NW Safe Route to Schools corridor connecting Pacific Crest Elementary, West Woodland Elementary, and Greenwood Elementary Schools, say Ballard Greenways advocates. The project for signs and signal changes was funded by a Neighborhood Park and Street Fund application submitted in 2014 by Fremont Greenways.",
+	        "sdotpage": "",
+	        "sngblog": "http://seattlegreenways.org/blog/2015/04/23/small-fixes-big-wins-ballard/",
+	        "otherlink": "",
+	        "otherlinktext": "",
+	        "campaignpage": "http://seattlegreenways.org/2016-campaigns/district-6-6th-ave-safe-route-school/",
+	        "getinvolved": "",
+	        "sngpage": "http://seattlegreenways.org/get-involved/join-us/"
+	    },
+	    "geometry": {
+	        "type": "Point",
+	        "coordinates": [-122.364712, 47.658947]
+	    }
+
+	    ]
+	};
+
+	var leaflet = new Leaflet({
+	},
+	
+	function() {
+				
+
+	});
+
+	var zipcodesarray = [];
+
+	for(var i = 0; i < RainierAveSSafetyprojectsProtectedBikeLanes.features.length; i++) {
+		zipcodesarray.push(RainierAveSSafetyprojectsProtectedBikeLanes.features[i]);
+	}
+
+	console.log(zipcodesarray);
+
+	var zipcodescontrol = L.layerGroup(zipcodesarray).addTo(leaflet.map);
+
+	console.log(zipcodescontrol);
+
+	var overlayMaps = {
+    	"Council Districts": councildistrictscontrol,
+    	"Zip Codes": zipcodescontrol
+	};
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+var geojsonFeature = {
+    "type": "Feature",
+    "properties": {
+        "name": "Leary Bicycle Signal",
+        "facilitytype": "signal",
+        "status": "constructed",
+        "yearcompleated": "2014",
+        "SNGpriority": "a prioritized project of",
+        "neighborhood": "Fremont",
+        "district": "6",
+        "cost": "$40,000",
+        "paragraph": "Seattle Department of Transportation (SDOT) just added a new, safer connection across Leary Way near the 6th Ave NW corridor. Connecting 6th Ave NW to the Burke Gilman Trail and to the existing Ballard Greenway is the top priority for Greenways groups in City Council District 6 that covers Fremont and Ballard. The push-button signal for people on bikes is placed near popular destinations including Hale’s Ales Brewery, Fred Meyer, and the Burke Gilman Trail. The new push button will help families going to the proposed 6th Ave NW Safe Route to Schools corridor connecting Pacific Crest Elementary, West Woodland Elementary, and Greenwood Elementary Schools, say Ballard Greenways advocates. The project for signs and signal changes was funded by a Neighborhood Park and Street Fund application submitted in 2014 by Fremont Greenways.",
+        "SDOTlink": "",
+        "SNGblog": "http://seattlegreenways.org/blog/2015/04/23/small-fixes-big-wins-ballard/",
+        "otherlink": "",
+        "otherlinktext": "",
+        "campaignpage": "http://seattlegreenways.org/2016-campaigns/district-6-6th-ave-safe-route-school/",
+        "getinvolved": "",
+        "SNGpage": "http://seattlegreenways.org/get-involved/join-us/"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-122.364712, 47.658947]
+    }
+};
